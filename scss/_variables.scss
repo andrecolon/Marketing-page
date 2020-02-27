@@ -1,0 +1,29 @@
+// Colors
+$main-bg: #253759;
+$soft-white: #ebedf2;
+$darker-color: #334018;
+$button-bg: #d9c382;
+$secondary-color: #707329;
+$testbox:#ff6600;
+$h1-font: 'Racing Sans One',
+serif;
+$header-style-font:'Faster One',
+serif; //Font sizes
+$f-size: ( "sm": 1.2em, "md": 1.6em, "lg": 2em);
+// Media Queries - !Default aka "unless" the value has not been used
+$breakpoints: (phone: 640px, tablet: 768px, desktop: 1024px) !default;
+// Functions -- Mapping And Keys - with warning
+$colors:( "primary": tomato, "secondary": hotpink);
+@function color($key) {
+    @if not map-has-key($colors, $key) {
+        @warn "Key not found.";
+    }
+    @return map-get($colors, $key);
+} //Use for @ media
+$mobile: 500px;
+// $header: 'h1, h2, h3';
+// @for $i from 1 through 6 {
+//     h#{7 - $i} {
+//         header: $i * 1.4em;
+//     }
+// }

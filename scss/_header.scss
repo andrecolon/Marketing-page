@@ -1,0 +1,46 @@
+        // Navigation Styles here
+        header {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            nav {
+                background-color: $main-bg;
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                @media only screen and (max-width: 500px) {
+                    font-size: 12px;
+                }
+                // background: $testbox;
+                ul {
+                    display: flex;
+                    justify-content: space-evenly;
+                    @media only screen and (max-width: 500px) {
+                        justify-content: center;
+                    }
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    a {
+                        padding-top: 15px;
+                        li {
+                            color: $soft-white;
+                            font: $header-style-font;
+                            @include funlinks(1.6em, 900, 0 15px, none);
+                        }
+                    }
+                }
+            }
+            @media only screen and (max-width: 500px) {
+                font-size: 18px;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+            }
+            .iphone {
+                position: absolute;
+                right: 0;
+            }
+        }

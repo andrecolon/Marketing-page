@@ -1,0 +1,55 @@
+.main-container {
+    max-width: 1200px;
+    border: 1px solid #444444;
+    margin: 0 auto;
+}
+
+.banner-area {
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    position: relative;
+    background: url(../img/banner.jpg) no-repeat center orange;
+    background-size: 1200px 350px;
+    .iphone {
+        position: absolute;
+        right: 300px;
+        background: gold;
+    }
+    h1 {
+        width: 100%;
+        padding: 20px 0;
+        font-family: $h1-font;
+        color: $soft-white;
+        font-size: 3.5rem;
+        @media only screen and (max-width: 500px) {
+            display: inline;
+            padding: 20px 0 0 0px;
+        }
+    }
+}
+
+.rental-land-lookup {
+    max-width: 1200px;
+    height: 350px;
+    background: green;
+    position: relative;
+    .rv-search-form {
+        width: 500px;
+        height: 270px;
+        background: $soft-white;
+        position: absolute;
+        top: -50px;
+        z-index: 10;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    .boxes {
+        width: 100px;
+        height: 150px;
+        background-color: $testbox;
+    }
+}
