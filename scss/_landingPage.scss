@@ -1,0 +1,26 @@
+.lp-container {
+    width: 100%;
+    display: flex;
+    .landing-page-logo {
+        margin: 0 auto;
+        width: 5%;
+        position: relative;
+        left: 75px;
+        z-index: 10;
+        top: 20px;
+    }
+    .find-space-container {
+        width: 50%;
+        background-color: red;
+        background-image: url('pathtoimage');
+        background-size: cover;
+        height: 100vh;
+    }
+    .rent-space-container {
+        width: 50%;
+        background-color: blue;
+        background-image: url('pathtoimage');
+        background-size: cover;
+        height: 100vh;
+    }
+}

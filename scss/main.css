@@ -142,6 +142,15 @@ align-items: center;
 .text-content {
     order: -1;
 } */
+.landing-page-logo {
+  margin: 0 auto;
+  width: 15%;
+  position: relative;
+  left: 75px;
+  z-index: 10;
+  top: 20px;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,10 +160,11 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
+  background-color: #253759;
+  text-align: center;
 }
 
 header nav {
-  background-color: #253759;
   width: 100%;
   padding: 20px;
   display: -webkit-box;
@@ -163,6 +173,9 @@ header nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (max-width: 500px) {
@@ -196,16 +209,12 @@ header nav ul {
   }
 }
 
-header nav ul a {
-  padding-top: 15px;
-}
-
 header nav ul a li {
   color: #ebedf2;
-  font: "Faster One", serif;
+  font-family: "Racing Sans One", serif;
   font-size: 1.6em;
   font-weight: 900;
-  padding: 0 15px;
+  padding: 15px;
   text-decoration: none;
 }
 
@@ -224,35 +233,26 @@ header nav ul a li {
   }
 }
 
-header .iphone {
-  position: absolute;
-  right: 0;
-}
-
 .main-container {
   max-width: 1200px;
   border: 1px solid #444444;
-  margin: 0 auto;
+  margin: 20px auto;
+  position: relative;
 }
 
-.banner-area {
-  width: 1200px;
+.main-container .banner-area {
+  width: 1180px;
   height: 250px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  background: url(../img/banner.jpg) no-repeat center orange;
+  background: url(../img/banner.jpg) no-repeat left center;
   background-size: 1200px 350px;
 }
 
-.banner-area .iphone {
-  position: absolute;
-  right: 300px;
-  background: gold;
-}
-
-.banner-area h1 {
+.main-container .banner-area h1 {
   width: 100%;
   padding: 20px 0;
   font-family: "Racing Sans One", serif;
@@ -261,29 +261,71 @@ header .iphone {
 }
 
 @media only screen and (max-width: 500px) {
-  .banner-area h1 {
+  .main-container .banner-area h1 {
     display: inline;
     padding: 20px 0 0 0px;
   }
 }
 
-.rental-land-lookup {
+.main-container .banner-area .app-download {
+  width: 545px;
+  background: #253759;
+  height: 100px;
+  position: relative;
+  top: 40px;
+  text-align: center;
+}
+
+.main-container .banner-area .app-download .cta-app-text {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #ebedf2;
+  margin-top: 40px;
+}
+
+.main-container .banner-area .app-download .iphone {
+  position: absolute;
+  right: 300px;
+  top: -20px;
+}
+
+.main-container .banner-area .app-download .man-phone {
+  position: relative;
+  right: 300px;
+  bottom: 20px;
+}
+
+.main-container .rental-land-lookup {
   max-width: 1200px;
-  height: 350px;
-  background: green;
+  height: 235px;
+  background: url("../img/rv-beach.jpg") right center #253759;
   position: relative;
 }
 
-.rental-land-lookup .rv-search-form {
+.main-container .rental-land-lookup .search-instructions {
+  width: 450px;
+  color: #ebedf2;
+  position: absolute;
+  right: 200px;
+  top: 20px;
+}
+
+.main-container .rental-land-lookup .search-instructions h1 {
+  font-family: "Racing Sans One", serif;
+  color: #ebedf2;
+  font-size: 3.5rem;
+}
+
+.main-container .rental-land-lookup .rv-search-form {
   width: 500px;
   height: 270px;
-  background: #ebedf2;
   position: absolute;
-  top: -50px;
+  top: -100px;
+  left: 10px;
   z-index: 10;
 }
 
-section {
+.main-container section .upsell-packages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,9 +335,199 @@ section {
           flex-direction: row;
 }
 
-section .boxes {
-  width: 100px;
-  height: 150px;
-  background-color: #ff6600;
+.main-container section .tours-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-width: 1200px;
+  padding: 50px 0;
+  background: #707329;
+  text-align: center;
+}
+
+.main-container section .tours-grid .tour-box {
+  margin-top: 20px;
+  padding: 20px;
+  color: #ebedf2;
+}
+
+.main-container section .tours-grid .tour-box .section-title {
+  display: block;
+  font-family: "Racing Sans One", serif;
+  color: #ebedf2;
+  font-size: 3.5rem;
+}
+
+.main-container section .tours-grid .boxes {
+  width: 180px;
+  height: 280px;
+  background-color: #334018;
+  padding: 20px;
+  margin: 20px;
+}
+
+.main-container .rv-rental-area {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-container footer {
+  color: #ebedf2;
+  font-family: "Racing Sans One", serif;
+  background: #253759;
+  padding: 20px 0;
+}
+
+.main-container footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main-container footer nav ul a li {
+  color: #ebedf2;
+}
+
+.main-container .form-style-5 {
+  max-width: 500px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  padding: 20px;
+  background: #ebedf2;
+  border-radius: 8px;
+}
+
+.main-container .form-style-5 fieldset {
+  border: none;
+}
+
+.main-container .form-style-5 legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.main-container .form-style-5 label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.main-container .form-style-5 input[type="text"],
+.main-container .form-style-5 input[type="date"],
+.main-container .form-style-5 input[type="datetime"],
+.main-container .form-style-5 input[type="email"],
+.main-container .form-style-5 input[type="number"],
+.main-container .form-style-5 input[type="search"],
+.main-container .form-style-5 input[type="time"],
+.main-container .form-style-5 input[type="url"],
+.main-container .form-style-5 textarea,
+.main-container .form-style-5 select {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #334018;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+}
+
+.main-container .form-style-5 input[type="text"]:focus,
+.main-container .form-style-5 input[type="date"]:focus,
+.main-container .form-style-5 input[type="datetime"]:focus,
+.main-container .form-style-5 input[type="email"]:focus,
+.main-container .form-style-5 input[type="number"]:focus,
+.main-container .form-style-5 input[type="search"]:focus,
+.main-container .form-style-5 input[type="time"]:focus,
+.main-container .form-style-5 input[type="url"]:focus,
+.main-container .form-style-5 textarea:focus,
+.main-container .form-style-5 select:focus {
+  background: #ebedf2;
+}
+
+.main-container .form-style-5 select {
+  -webkit-appearance: menulist-button;
+  height: 35px;
+}
+
+.main-container .form-style-5 .number {
+  background: #1abc9c;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px 15px 15px 0px;
+}
+
+.main-container .form-style-5 input[type="submit"],
+.main-container .form-style-5 input[type="button"],
+.main-container button {
+  position: relative;
+  display: block;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  margin: 0 auto;
+  background: #253759;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  max-width: 460px;
+  width: 100%;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+}
+
+.main-container .form-style-5 input[type="submit"]:hover,
+.main-container .form-style-5 input[type="button"]:hover {
+  background: #334018;
+}
+
+.lp-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lp-container .landing-page-logo {
+  margin: 0 auto;
+  width: 5%;
+  position: relative;
+  left: 75px;
+  z-index: 10;
+  top: 20px;
+}
+
+.lp-container .find-space-container {
+  width: 50%;
+  background-color: red;
+  background-image: url("pathtoimage");
+  background-size: cover;
+  height: 100vh;
+}
+
+.lp-container .rent-space-container {
+  width: 50%;
+  background-color: blue;
+  background-image: url("pathtoimage");
+  background-size: cover;
+  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
