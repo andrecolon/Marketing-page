@@ -1,8 +1,10 @@
 .main-container {
     max-width: 1200px;
-    border: 1px solid #444444;
     margin: 20px auto;
     position: relative;
+    @media (max-width: 1024px) {
+        max-width: 100%;
+    }
     .banner-area {
         width: 1180px;
         height: 250px;
@@ -11,6 +13,11 @@
         position: relative;
         background: url(../img/banner.jpg) no-repeat left center;
         background-size: 1200px 350px;
+        max-width: 1200px;
+        @media (max-width: 1024px) {
+            max-width: 100%;
+            background-size: 100;
+        }
         h1 {
             width: 100%;
             padding: 20px 0;
@@ -29,6 +36,14 @@
             position: relative;
             top: 40px;
             text-align: center;
+            @media (max-width: 500px) {
+                background: transparent;
+            }
+            a {
+                color: $soft-white;
+                text-decoration: none;
+                font-weight: 900;
+            }
             .cta-app-text {
                 font-weight: 900;
                 font-size: 1.2rem;
@@ -39,194 +54,253 @@
                 position: absolute;
                 right: 300px;
                 top: -20px;
-            }
-            .man-phone {
-                position: relative;
-                right: 300px;
-                bottom: 20px
+                @media (max-width: 500px) {
+                    right: 10px;
+                    width: 100px;
+                    top: 82px;
+                }
             }
         }
+        .man-phone {
+            position: relative;
+            right: 300px;
+            bottom: 20px
+        }
     }
-    .team-container {
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .member {
+        h3,
+        p,
+        img {
+            margin: 10px 20px;
+        }
+        width: 240px;
+        color: $soft-white;
+        h3 {
+            font-family: $h1-font;
+            color: $soft-white;
+            font-size: 1rem;
+        }
+    }
+    @media (max-width: 500px) {
+        .team-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .member {
+            width: 100%;
+            color: #ebedf2;
+            text-align: center;
+        }
+        .member img {
+            width: 92%;
+            margin: 10px 0;
+        }
+    }
+}
+
+.rental-land-lookup {
+    max-width: 1200px;
+    height: 235px;
+    background: url('../img/rv-beach.jpg') right center $main-bg;
+    position: relative;
+    .search-instructions {
+        width: 450px;
+        color: $soft-white;
+        position: absolute;
+        right: 200px;
+        top: 20px;
+        h1 {
+            font-family: $h1-font;
+            color: $soft-white;
+            font-size: 3.5rem;
+        }
+    }
+    .rv-search-form {
+        width: 500px;
+        height: 270px;
+        position: absolute;
+        top: -100px;
+        left: 10px;
+        z-index: 10;
+    }
+}
+
+section {
+    .upsell-packages {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
     }
-    .rental-land-lookup {
+    .tours-grid {
+        display: flex;
+        justify-content: flex-end;
         max-width: 1200px;
-        height: 235px;
-        background: url('../img/rv-beach.jpg') right center $main-bg;
-        position: relative;
-        .search-instructions {
-            width: 450px;
+        padding: 50px 0;
+        background: $secondary-color;
+        text-align: center;
+        .tour-box {
+            margin-top: 20px;
+            padding: 20px;
             color: $soft-white;
-            position: absolute;
-            right: 200px;
-            top: 20px;
-            h1 {
+            .section-title {
+                display: block;
                 font-family: $h1-font;
                 color: $soft-white;
                 font-size: 3.5rem;
             }
         }
-        .rv-search-form {
-            width: 500px;
-            height: 270px;
-            position: absolute;
-            top: -100px;
-            left: 10px;
-            z-index: 10;
+        .boxes {
+            width: 180px;
+            height: 280px;
+            background-color: $darker-color;
+            padding: 20px;
+            margin: 20px;
         }
     }
-    section {
-        .upsell-packages {
+}
+
+.rv-rental-area {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    color: $soft-white;
+    font-family: $h1-font;
+    background: $main-bg;
+    padding: 20px 0;
+    nav {
+        ul {
             display: flex;
-            flex-direction: row;
-        }
-        .tours-grid {
-            display: flex;
-            justify-content: flex-end;
-            max-width: 1200px;
-            padding: 50px 0;
-            background: $secondary-color;
-            text-align: center;
-            .tour-box {
-                margin-top: 20px;
-                padding: 20px;
-                color: $soft-white;
-                .section-title {
-                    display: block;
-                    font-family: $h1-font;
+            justify-content: space-evenly;
+            a {
+                li {
                     color: $soft-white;
-                    font-size: 3.5rem;
-                }
-            }
-            .boxes {
-                width: 180px;
-                height: 280px;
-                background-color: $darker-color;
-                padding: 20px;
-                margin: 20px;
-            }
-        }
-    }
-    .rv-rental-area {
-        margin: 0 auto;
-        text-align: center;
-    }
-    footer {
-        color: $soft-white;
-        font-family: $h1-font;
-        background: $main-bg;
-        padding: 20px 0;
-        nav {
-            ul {
-                display: flex;
-                justify-content: space-evenly;
-                a {
-                    li {
-                        color: $soft-white;
-                    }
                 }
             }
         }
     }
-    /// Forms to be edited
-    .form-style-5 {
-        max-width: 500px;
-        padding: 10px 20px;
-        margin: 10px auto;
-        padding: 20px;
-        background: $soft-white;
-        border-radius: 8px;
+}
+
+button a {
+    color: $button-bg;
+    font-family: $header-style-font;
+    @media (max-width: 500px) {
+        color: $button-bg;
     }
-    .form-style-5 fieldset {
-        border: none;
-    }
-    .form-style-5 legend {
-        font-size: 1.4em;
-        margin-bottom: 10px;
-    }
-    .form-style-5 label {
-        display: block;
-        margin-bottom: 8px;
-    }
-    .form-style-5 input[type="text"],
-    .form-style-5 input[type="date"],
-    .form-style-5 input[type="datetime"],
-    .form-style-5 input[type="email"],
-    .form-style-5 input[type="number"],
-    .form-style-5 input[type="search"],
-    .form-style-5 input[type="time"],
-    .form-style-5 input[type="url"],
-    .form-style-5 textarea,
-    .form-style-5 select {
-        background: #ffffff;
-        border: none;
-        border-radius: 4px;
-        font-size: 15px;
-        margin: 0;
-        outline: 0;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        color: $darker-color;
-        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-        margin-bottom: 30px;
-    }
-    .form-style-5 input[type="text"]:focus,
-    .form-style-5 input[type="date"]:focus,
-    .form-style-5 input[type="datetime"]:focus,
-    .form-style-5 input[type="email"]:focus,
-    .form-style-5 input[type="number"]:focus,
-    .form-style-5 input[type="search"]:focus,
-    .form-style-5 input[type="time"]:focus,
-    .form-style-5 input[type="url"]:focus,
-    .form-style-5 textarea:focus,
-    .form-style-5 select:focus {
-        background: $soft-white;
-    }
-    .form-style-5 select {
-        -webkit-appearance: menulist-button;
-        height: 35px;
-    }
-    .form-style-5 .number {
-        background: #1abc9c;
-        color: #fff;
-        height: 30px;
-        width: 30px;
-        display: inline-block;
-        font-size: 0.8em;
-        margin-right: 4px;
-        line-height: 30px;
-        text-align: center;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-        border-radius: 15px 15px 15px 0px;
-    }
-    .form-style-5 input[type="submit"],
-    .form-style-5 input[type="button"],
-    button {
-        position: relative;
-        display: block;
-        padding: 19px 39px 18px 39px;
-        color: #FFF;
-        margin: 0 auto;
-        background: $main-bg;
-        font-size: 18px;
-        text-align: center;
-        font-style: normal;
-        max-width: 460px;
-        width: 100%;
-        border-width: 1px 1px 3px;
-        margin-bottom: 10px;
-    }
-    .form-style-5 input[type="submit"]:hover,
-    .form-style-5 input[type="button"]:hover {
-        background: $darker-color;
-    }
+}
+
+/// Forms to be edited
+.form-style-5 {
+    max-width: 500px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    padding: 20px;
+    background: $soft-white;
+    border-radius: 8px;
+}
+
+.form-style-5 fieldset {
+    border: none;
+}
+
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    background: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: $darker-color;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus {
+    background: $soft-white;
+}
+
+.form-style-5 select {
+    -webkit-appearance: menulist-button;
+    height: 35px;
+}
+
+.form-style-5 .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"],
+button {
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: $main-bg;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    max-width: 460px;
+    width: 100%;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover {
+    background: $darker-color;
 }
 
 /// Footer area
