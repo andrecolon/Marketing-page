@@ -47,6 +47,11 @@
             }
         }
     }
+    .team-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .rental-land-lookup {
         max-width: 1200px;
         height: 235px;

@@ -1,26 +1,246 @@
-.lp-container {
-    width: 100%;
-    display: flex;
-    .landing-page-logo {
-        margin: 0 auto;
-        width: 5%;
-        position: relative;
-        left: 75px;
-        z-index: 10;
-        top: 20px;
-    }
-    .find-space-container {
-        width: 50%;
-        background-color: red;
-        background-image: url('pathtoimage');
-        background-size: cover;
-        height: 100vh;
-    }
-    .rent-space-container {
-        width: 50%;
-        background-color: blue;
-        background-image: url('pathtoimage');
-        background-size: cover;
-        height: 100vh;
-    }
-}
+                                                                                    html.lp {
+                                                                                        overflow: hidden;
+                                                                                        @media (max-width: 1024px) {
+                                                                                            overflow: visible;
+                                                                                            overflow-x: hidden;
+                                                                                        }
+                                                                                    }
+                                                                                    
+                                                                                    body {
+                                                                                        margin: 0;
+                                                                                        height: 100vh;
+                                                                                        perspective: 1px;
+                                                                                        transform-style: preserve-3d;
+                                                                                        background: $main-bg;
+                                                                                    }
+                                                                                    
+                                                                                    .lp-header {
+                                                                                        height: 150px;
+                                                                                        a.landing-page-logo {
+                                                                                            @media (max-width: 1024px) {
+                                                                                                position: absolute;
+                                                                                                bottom: 0;
+                                                                                                left: 50%;
+                                                                                            }
+                                                                                            margin: 0 auto;
+                                                                                            width: 9%;
+                                                                                            position: relative;
+                                                                                            left: 75px;
+                                                                                            z-index: 10;
+                                                                                            top: 20px;
+                                                                                        }
+                                                                                        nav.lp-menu {
+                                                                                            display: flex;
+                                                                                        }
+                                                                                    }
+                                                                                    
+                                                                                    .lp-container {
+                                                                                        position: relative;
+                                                                                        @media (max-width: 1024px) {
+                                                                                            display: flex;
+                                                                                            flex-direction: column;
+                                                                                        }
+                                                                                        @media screen {
+                                                                                            width: 100%;
+                                                                                            display: flex;
+                                                                                            header.lp-header .landing-page-logo {
+                                                                                                margin: 0 auto;
+                                                                                                width: 5%;
+                                                                                                position: relative;
+                                                                                                left: 75px;
+                                                                                                z-index: 10;
+                                                                                                top: 20px;
+                                                                                            }
+                                                                                            .find-space-container {
+                                                                                                @media (max-width: 1024px) {
+                                                                                                    overflow: visible;
+                                                                                                    width: 100%;
+                                                                                                }
+                                                                                                width: 50%;
+                                                                                                background: url('../img/lp-family.jpg') no-repeat bottom center local;
+                                                                                                -webkit-background-size: cover;
+                                                                                                -moz-background-size: cover;
+                                                                                                -o-background-size: cover;
+                                                                                                background-size: cover;
+                                                                                                height: 100vh;
+                                                                                                filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                                                                                                /* Firefox 10+, Firefox on Android */
+                                                                                                -webkit-filter: grayscale(100%);
+                                                                                                -moz-filter: grayscale(100%);
+                                                                                                -ms-filter: grayscale(100%);
+                                                                                                filter: grayscale(100%);
+                                                                                                filter: gray;
+                                                                                                /* IE 6-9 */
+                                                                                                .cta-fspace-box {
+                                                                                                    @media (max-width: 1024px) {
+                                                                                                        overflow: visible;
+                                                                                                        max-width: 50vw;
+                                                                                                    }
+                                                                                                    margin: 0 auto;
+                                                                                                    max-width: 20vw;
+                                                                                                    margin-top: 10%;
+                                                                                                    padding: 20px;
+                                                                                                    border-radius: 6px;
+                                                                                                    box-shadow: $main-bg;
+                                                                                                    -webkit-box-shadow: 1px 15px 32px -13px rgba(37,
+                                                                                                    55,
+                                                                                                    89,
+                                                                                                    1);
+                                                                                                    -moz-box-shadow: 1px 15px 32px -13px rgba(37,
+                                                                                                    55,
+                                                                                                    89,
+                                                                                                    1);
+                                                                                                    box-shadow: 1px 15px 32px -13px rgba(37,
+                                                                                                    55,
+                                                                                                    89,
+                                                                                                    1);
+                                                                                                    background: linear-gradient($darker-color,
+                                                                                                    $secondary-color);
+                                                                                                    .lp-fspace-h1 {
+                                                                                                        font-family: $h1-font;
+                                                                                                        color: $soft-white;
+                                                                                                        font-size: 2rem;
+                                                                                                    }
+                                                                                                    .lp-fspace-paragraph {
+                                                                                                        margin: 10px 0 0 0;
+                                                                                                        color: $soft-white;
+                                                                                                        line-height: 1.5rem;
+                                                                                                    }
+                                                                                                    button {
+                                                                                                        width: 100%;
+                                                                                                        padding: 20px;
+                                                                                                        border-radius: 4px;
+                                                                                                        border-radius: 4px;
+                                                                                                        margin: 25px 0;
+                                                                                                        font-size: 1.6rem;
+                                                                                                        font-family: inherit;
+                                                                                                         :hover {
+                                                                                                            cursor: pointer;
+                                                                                                            background: $darker-color;
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                            .rent-land-container {
+                                                                                                @media (max-width: 1024px) {
+                                                                                                    overflow: visible;
+                                                                                                    width: 100%;
+                                                                                                }
+                                                                                                width: 50%;
+                                                                                                background: $main-bg url('../img/lp-land.jpg') no-repeat bottom center fixed;
+                                                                                                -webkit-background-size: cover;
+                                                                                                -moz-background-size: cover;
+                                                                                                -o-background-size: cover;
+                                                                                                background-size: cover;
+                                                                                                height: 100vh;
+                                                                                                filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                                                                                                /* Firefox 10+, Firefox on Android */
+                                                                                                -webkit-filter: grayscale(100%);
+                                                                                                -moz-filter: grayscale(100%);
+                                                                                                -ms-filter: grayscale(100%);
+                                                                                                filter: grayscale(100%);
+                                                                                                filter: gray;
+                                                                                                /* IE 6-9 */
+                                                                                                .cta-rland-box {
+                                                                                                    @media (max-width: 1024px) {
+                                                                                                        overflow: visible;
+                                                                                                        max-width: 50vw;
+                                                                                                    }
+                                                                                                    margin: 0 auto;
+                                                                                                    max-width: 20vw;
+                                                                                                    margin-top: 10%;
+                                                                                                    padding: 20px;
+                                                                                                    border-radius: 6px;
+                                                                                                    box-shadow: $main-bg;
+                                                                                                    -webkit-box-shadow: 1px 15px 32px -13px rgba(37,
+                                                                                                    55,
+                                                                                                    89,
+                                                                                                    1);
+                                                                                                    -moz-box-shadow: 1px 15px 32px -13px rgba(37,
+                                                                                                    55,
+                                                                                                    89,
+                                                                                                    1);
+                                                                                                    box-shadow: 1px 15px 32px -13px rgba(37,
+                                                                                                    55,
+                                                                                                    89,
+                                                                                                    1);
+                                                                                                    background: linear-gradient($main-bg,
+                                                                                                    $soft-white);
+                                                                                                    .lp-rland-h1 {
+                                                                                                        font-family: $h1-font;
+                                                                                                        color: $soft-white;
+                                                                                                        font-size: 2rem;
+                                                                                                    }
+                                                                                                    .lp-rland-paragraph {
+                                                                                                        margin: 10px 0 0 0;
+                                                                                                        color: $soft-white;
+                                                                                                        line-height: 1.5rem;
+                                                                                                    }
+                                                                                                    button {
+                                                                                                        width: 100%;
+                                                                                                        padding: 20px;
+                                                                                                        border-radius: 4px;
+                                                                                                        border-radius: 4px;
+                                                                                                        margin: 25px 0;
+                                                                                                        font-size: 1.6rem;
+                                                                                                        font-family: inherit;
+                                                                                                         :hover {
+                                                                                                            cursor: pointer;
+                                                                                                            background: $darker-color;
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                            .find-space-container:hover,
+                                                                                            .rent-land-container:hover {
+                                                                                                transition: 0.5s;
+                                                                                                -webkit-filter: none;
+                                                                                                -moz-filter: none;
+                                                                                                -ms-filter: none;
+                                                                                                filter: none;
+                                                                                            }
+                                                                                        }
+                                                                                        .app-container {
+                                                                                            position: absolute;
+                                                                                            width: 900px;
+                                                                                            bottom: 0;
+                                                                                            left: 35%;
+                                                                                            .cta-heading {
+                                                                                                @media (max-width: 1024px) {
+                                                                                                    position: absolute;
+                                                                                                    top: -115px;
+                                                                                                    z-index: 3;
+                                                                                                    border-radius: 10px;
+                                                                                                    text-align: center;
+                                                                                                }
+                                                                                                @media (max-width: 500px) {}
+                                                                                                font-family: $h1-font;
+                                                                                                text-shadow: 2px 1px $main-bg;
+                                                                                                padding: 20px;
+                                                                                                color: $soft-white;
+                                                                                                font-size: 1.5rem;
+                                                                                                background: $button-bg;
+                                                                                                width: 20vw;
+                                                                                                position: absolute;
+                                                                                                top: -500px;
+                                                                                                z-index: 1;
+                                                                                                border-radius: 10px;
+                                                                                                text-align: left;
+                                                                                                a {
+                                                                                                    color: $soft-white;
+                                                                                                    text-decoration: none;
+                                                                                                }
+                                                                                            }
+                                                                                            .cta-man-with-phone {
+                                                                                                position: absolute;
+                                                                                                bottom: -50px;
+                                                                                                z-index: 1;
+                                                                                                @media (max-width: 1024px) {
+                                                                                                    z-index: 2;
+                                                                                                    bottom: -100px;
+                                                                                                    border-radius: 10px;
+                                                                                                    text-align: center;
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
