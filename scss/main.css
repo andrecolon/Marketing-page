@@ -378,7 +378,7 @@ header nav ul a li {
 .team-container .member h3 {
   font-family: "Racing Sans One", serif;
   color: #ebedf2;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 500px) {
